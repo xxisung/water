@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 물 마시기 버튼 -->
+    <Button
+        android:id="@+id/buttonAddWater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="물 마시기 추가"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 물 섭취량 텍스트 -->
+    <TextView
+        android:id="@+id/textWaterIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 마신 물: 0잔"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 오른 층수 텍스트 -->
+    <TextView
+        android:id="@+id/textFloorsClimbed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오른 층수: 0층"
+        android:textSize="18sp" />
+</LinearLayout>
