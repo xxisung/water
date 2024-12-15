@@ -130,3 +130,19 @@ fun PreviewWaterAndStepsScreen() {
         WaterAndStepsScreen(context = androidx.compose.ui.platform.LocalContext.current)
     }
 }
+
+fun saveData(context: Context, waterCount: Int, stepCount: Int) {
+    val sharedPreferences = context.getSharedPreferences("tracker_prefs", Context.MODE_PRIVATE)
+    val editor = sharedPreferences.edit()
+    editor.putInt("WATER_COUNT", waterCount)
+    editor.putInt("STEP_COUNT", stepCount)
+    editor.apply() // 저장
+}
+
+// 불러오기 함수
+fun loadData(context: Context): Pair<Int, Int> {
+    val sharedPreferences = context.getSharedPreferences("tracker_prefs", Context.MODE_PRIVATE)
+    val waterCount = sharedPreferences.getInt("WATER_COUNT", 0)
+    val stepCount = sharedPreferences.getInt("STEP_COUNT", 0)
+    return Pair(waterCount, stepCount)
+}
